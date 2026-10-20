@@ -1,5 +1,5 @@
-***PC-Bygger***
-*Laget av Henry JR*
+***PC-Bygger*** \
+*Laget av Henry JR* \
 Navn: SuperPC
 Bruker: Ungdom og unge voksne som skal kjøpe kraftig pc
 Problem: Gjør det lett å bestille pcer med riktig «Specs»
