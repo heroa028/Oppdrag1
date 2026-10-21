@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/Logo1.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="Navbar">
+        <img src="{{ url_for('static', filename='images/Logo1.png') }}" alt="">
+    <h1> <span style="color: violet">V</span>elkommen til Super-PC</h1>
+</nav>
+<img class="Pc_banner" src="{{ url_for('static', filename='images/Pc_banner.png') }}" alt="PC_banner">
+<section class="Nede_delen">
+    <h3>Lag tusenvis av kombinasjoner av PC-er</h3>
+    <h5>Bestill idag her:</h5>
+    <a href="Bestilling">
+    <button class="Bestill_Knapp">Bestill nå</button>
+   
+    </a>
+     </section>
+</body>
+
+</html>
