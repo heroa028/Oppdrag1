@@ -20,11 +20,51 @@
 </nav>
 
 
+<h4>Lag din egen pc her:</h4>
 <section class="Butikk">
 
+    
+    <section class="Dropdowns">
+    <label for="Farge"><span style="color:violet">V</span>elg en farge:</label>
 
+    <select name="Farge" id="Farge">
+    <option class="Velg">----------</option>
+     {%for farge in Farge%}   
+     <option value="{{farge}}">{{farge}}</option>
+{%endfor%}
+    </select>
+    <label for="Cpu"><span style="color:violet">V</span>elg en Prosessor:</label>
+    <select name="Cpu" id="Cpu">
+        <option value="Velg">----------</option>
+    {%for cpu in Cpu%}
+    <option value="{{ Cpu['Navn'] }}">{{ cpu['Navn'] }} - {{ cpu['pris'] }} kr</option>
+    {%endfor%}
 
-    <img class="pc1" src="{{ url_for('static', filename='images/pc1.jpg') }}" alt="">
+    </select>
+
+    <label for="Gpu"><span style="color:violet">V</span>elg ett grafikkort:</label>
+    <select name="Gpu" id="Gpu">
+        <option value="Velg">----------</option>
+    {%for gpu in Gpu%}
+    <option value="{{ Gpu['Navn'] }}">{{ gpu['Navn'] }} - {{ gpu['pris'] }} kr</option>
+    {%endfor%}
+
+    </select>
+
+    <label for="ram"><span style="color:violet">V</span>elg en mengde DDR5 RAM:</label>
+    <select name="ram" id="ram">
+        <option value="Velg">----------</option>
+    {%for ram in ram%}
+    <option value="{{ ram['Navn'] }}">{{ ram['Navn'] }} - {{ ram['pris'] }} kr</option>
+    {%endfor%}
+
+    </select>
+   <a href=""> <button class="Submit" id="Submit">Velg PC</button> </a>
+    
+
+</section class="Bilde_t">
+
+    <img class="pc1" src="{{ url_for('static', filename='images/pc1.jpg') }}" alt="Bilde av demo pc">
 </section>
 </body>
 
