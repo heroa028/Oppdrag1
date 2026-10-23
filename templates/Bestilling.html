@@ -27,20 +27,29 @@
 
 
         <section class="Dropdowns">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div style="color: red; font-weight: bold; margin-bottom: 10px;">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
             <form method="POST" action="/Confirmation1">
                 <label for="Farge"><span style="color:violet">V</span>elg en farge:</label>
 
                 <select name="Farge" id="Farge" required>
                     <option value="0" id="Velg" class="Velg" disabled selected>----------</option>
                     {%for farge in Farge%}
-                    <option tabindex="0" type="button" value="{{farge}}">{{farge}}</option>
+                    <option type="button" value="{{farge}}">{{farge}}</option>
                     {%endfor%}
                 </select>
                 <label for="Cpu"><span style="color:violet">V</span>elg en Prosessor:</label>
                 <select name="Cpu" id="Cpu" required>
                     <option value="0" id="Velg" class="Velg" disabled selected>----------</option>
                     {%for cpu in Cpu%}
-                    <option value="{{ cpu }}">{{ cpu['Navn'] }} - {{ cpu['pris'] }} kr</option>
+                    <option value="{{ cpu['Navn'] }}">{{ cpu['Navn'] }} - {{ cpu['pris'] }} kr</option>
                     {%endfor%}
 
                 </select>
@@ -49,16 +58,16 @@
                 <select name="Gpu" id="Gpu" required>
                     <option value="0" class="Velg" disabled selected>----------</option>
                     {%for gpu in Gpu%}
-                    <option value="{{ gpu }}">{{ gpu['Navn'] }} - {{ gpu['pris'] }} kr</option>
+                    <option value="{{ gpu['Navn'] }}">{{ gpu['Navn'] }} - {{ gpu['pris'] }} kr</option>
                     {%endfor%}
 
                 </select>
 
-                <label for="ram"><span style="color:violet">V</span>elg en mengde DDR5 RAM:</label>
-                <select name="ram" id="ram" required>
+                <label for="Ram"><span style="color:violet">V</span>elg en mengde DDR5 RAM:</label>
+                <select name="Ram" id="Ram" required>
                     <option id="Velg" value="0" class="Velg" disabled selected>----------</option>
-                    {%for ram in ram%}
-                    <option value="{{ ram }}">{{ ram['Navn'] }} - {{ ram['pris }} kr</option>
+                    {%for ram in Ram%}
+                    <option value="{{ ram['Navn'] }}">{{ ram['Navn'] }} - {{ ram['pris'] }} kr</option>
                     {%endfor%}
 
 
@@ -70,11 +79,7 @@
         </form>
 
 
-        <section class="Bilde_t">
-            <img class="pc_del" src="{{ url_for('static', filename='images/pc_del.png') }}"
-                alt="Bilde av demo pc deler">
-            <img class="pc1" src="{{ url_for('static', filename='images/pc1.jpg') }}" alt="Bilde av demo pc">
-        </section>
+
     </section>
 
 </body>
