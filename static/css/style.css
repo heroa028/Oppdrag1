@@ -1,130 +1,298 @@
-h1{
+/* =========================
+   All-AROUND CSS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
     font-weight: bold;
     font-size: 7vh;
     font-family: "Ubuntu", sans-serif;
     margin: 0;
 }
-.Pc_banner{
-    width: 100%;
-    max-height: 40vh;
+
+p {
+    font-family: "Ubuntu", sans-serif;
 }
-.Navbar{
+
+.V {
+    color: blueviolet;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.Navbar {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: rgb(72, 72, 72);
     margin: 0;
     padding: 1vw;
-
+    width: 100%;
 }
-body{
-    padding: 0;
-    margin: 0;
-  }
-
-.Navbar img{
+.Navbar img {
     max-height: 7vh;
-    margin-right: 26vw;
+    width: auto;
+    margin-right: 5vw;
 }
-.Nede_delen{
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h3 {
+    font-family: "Ubuntu", sans-serif;
+    padding-bottom: 5vh;
+    border-bottom: solid;
+    border-color: blueviolet;
+}
+
+h4 {
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-left: 10vw;
+}
+
+h5 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 5vh;
+}
+
+
+/* =========================
+   BESTILLING.HTML
+========================= */
+
+.Butikk {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 3vw;
+    gap: 2vw;
+}
+
+
+/* =========================
+   DROPDOWNS
+========================= */
+
+.Dropdowns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 1vh;
+    padding-left: 10vw;
+    flex: 0 0 30%;
+    min-width: 0;
+    position: relative;
+    z-index: 5;
+}
+
+label {
+    display: block;
+    max-width: 100%;
+    font-size: 2.5vh;
+    margin-bottom: 0.5vh;
+}
+
+select {
+    display: block;
+    width: 170px;
+    max-width: 100%;
+    min-height: 36px;
+    margin: 1vh 0 2vh;
+    padding: 5px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 6;
+}
+
+option {
+    background-color: rgb(0, 0, 0);
+    color: blueviolet;
+}
+
+
+/* =========================
+   PC BILDER
+========================= */
+
+.Bilde_t {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex: 1;
+    min-width: 0;
+    margin-top: -5vh;
+    position: relative;
+    z-index: 1;
+}
+
+.pc_del {
+    display: block;
+    width: 45%;
+    max-height: 50vh;
+    object-fit: contain;
+    padding: 0;
+    pointer-events: none;
+}
+
+.pc1 {
+    display: block;
+    width: 35%;
+    max-height: 45vh;
+    object-fit: contain;
+    border-left: 2px solid black;
+    padding-left: 2vw;
+    padding-right: 0;
+    padding-bottom: 0;
+    pointer-events: none;
+}
+
+
+/* =========================
+   Knapper
+========================= */
+
+.Submit,.Bestill_Knapp {
+    min-height: 7vh;
+    width: 17vh;
+    border: 2px solid blueviolet;
+    border-radius: 1vw;
+    background-color: rgb(59, 58, 58);
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    cursor: pointer;
+    transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+    position: relative;
+    z-index: 6;
+}
+
+.Submit {
+    margin-top: 3vh;
+}
+
+.Submit:hover,
+.Bestill_Knapp:hover {
+    transform: scale(1.05);
+    background-color: white;
+    color: black;
+}
+
+
+/* =========================
+   FORSIDEN
+========================= */
+
+.Nede_delen {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.V{
-    color: blueviolet;
-}
-p{
-    font-family: "Ubuntu", sans-serif;
-}
-h3{
-    font-family: "Ubuntu", sans-serif;
-    padding-bottom: 5vh;
-    border-bottom: solid ;
-    border-color: blueviolet;
-}
-h5{
-    font-family: "Ubuntu", sans-serif;
-    font-size: 5vh;
-}
-.Bestill_Knapp{
-    min-height: 7vh;
-    width: 17vh;
-    border: solid;
-    border-radius: 1vw;
-    border-color: blueviolet;
-    background-color: rgb(59, 58, 58);
-    color: white;
-    font-weight: bold;
-    font-size: 2vh;
+
+.Pc_banner {
+    width: 100%;
+    max-height: 40vh;
+    object-fit: contain;
 }
 
-.Bestill_Knapp:hover{
-    transform: scale(1.1);
-    background-color: white;
-    color: black;
-    font-weight: bolder;
-    font-size: 3vh;
-}
-.pc1{
-    max-height: 50vh;
-    width: auto;
-    border-left: solid;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    border-bottom: solid ;
-    padding-bottom: 5vh;
 
-}
-.Dropdowns{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
-    padding-right: 40vw;
-    padding-top: 10vh;
-    padding-left: 10vw;
+/* =========================
+    FOR MINDRE SKJERMER
+========================= */
 
-}
-option{
-    max-width: 10vw;
-    height: 4vh;
-}
-select{
-    max-width: 10vw;
-    height: 4vh;
-    margin: 2vh;
-    margin-left: 0;
-}
-.Butikk{
-    display: flex;
-    justify-content: flex-end;
-}
-h4{
-    font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 5vh;
-    max-width: 40vw;
-    margin-bottom: 0;
-    padding-left: 20vw;
-}
-.Submit{
-    margin-top: 4vh;
-    min-height: 7vh;
-    width: 17vh;
-    border: solid;
-    border-radius: 1vw;
-    border-color: blueviolet;
-    background-color: rgb(59, 58, 58);
-    color: white;
-    font-weight: bold;
-    font-size: 2vh;
-}
-.Submit:hover{
-    transform: scale(1.1);
-    background-color: white;
-    color: black;
-    font-weight: bolder;
-    font-size: 3vh;
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 4vh;
+    }
+
+    .Navbar img {
+        max-height: 5vh;
+        margin-right: 3vw;
+    }
+
+    h4 {
+        font-size: 3.5vh;
+        padding-left: 5vw;
+    }
+
+    .Butikk {
+        flex-direction: column;
+        padding: 0 5vw;
+    }
+
+    .Dropdowns {
+        flex: 1;
+        width: 100%;
+        padding: 0;
+    }
+
+    label {
+        font-size: 2vh;
+    }
+
+    select {
+        width: 200px;
+        max-width: 100%;
+        min-height: 40px;
+    }
+
+    .Bilde_t {
+        width: 100%;
+        margin-top: 3vh;
+        gap: 2vw;
+    }
+
+    .pc_del {
+        width: 48%;
+        max-height: 35vh;
+    }
+
+    .pc1 {
+        width: 35%;
+        max-height: 35vh;
+        padding-left: 2vw;
+    }
+
+    .Submit,
+    .Bestill_Knapp {
+        min-height: 45px;
+        width: 140px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
 }
