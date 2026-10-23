@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
+
 
 app = Flask(__name__)
-
+app.secret_key = "1991"
 
 @app.route("/")
 def index():
@@ -35,6 +36,20 @@ def bestilling():
         {"Navn": "64gb", "pris": 12000},
     ]
     return render_template("Bestilling.html", Farge=Farge, ram=ram, Cpu=Cpu, Gpu=Gpu)
+
+@app.route("/Confirmation1", methods=["POST"])
+def Conf1():
+    Farge = request.form.get("Farge")
+    Gpu = request.form.get("Gpu")
+    Cpu = request.form.get("Cpu")
+    ram = request.form.get("ram")
+    if "0" in (Farge, Gpu, Cpu, ram) or not all([Farge, Gpu, Cpu, ram]):
+        flash("Vennligst velg en av alle komponentene!")
+        return redirect(url_for("bestilling"))
+    print(Gpu)
+    print(ram)
+    return render_template("Conf1.html", ram=ram, Cpu=Cpu, Gpu=Gpu, Farge=Farge)
+
 
 
 if __name__ == "__main__":

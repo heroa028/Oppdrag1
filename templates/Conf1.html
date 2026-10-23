@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/Logo1.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="Navbar">
+        <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/Logo1.png') }}" alt=""></a>
+    <h1> <span style="color: violet">S</span>uper-PC</h1>
+</nav>
+
+<section class="Cf1">
+<h6><span style="color: violet;">K</span>onfirmasjon av bestilling:</h6>
+<h2><span style="color: black;" class="D">D</span>u valgte:</h4>
+
+    <section class="Valg">
+<p>- <span style="color: violet;">F</span>arge: {{Farge}} </p>
+<p>- <span style="color: violet;">C</span>pu: {{Cpu}} </p>
+<p>- <span style="color: violet;">G</span>pu: {{Gpu}} </p>
+<p>- <span style="color: violet;">R</span>AM: {{ram}} </p>
+</section>
+</section>
+
+<section class="Pris">
+<h8 class="h21"><span style="color: black;">P</span>ris:</h8>
+<section class="Priser">
+<p>•<span style="color: violet;">C</span>pu: -{{Cpu['pris']}}kr </p>
+<p>•<span style="color: violet;">G</span>pu: -{{Gpu['pris']}}kr </p>
+<p>•<span style="color: violet;">R</span>AM: -{{ram['pris']}}kr </p>
+
+</section>
+
+
+
+</section>
+
+
+
+
+</body>
+
+</html>

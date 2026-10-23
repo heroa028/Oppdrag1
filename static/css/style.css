@@ -296,3 +296,42 @@ option {
         border-radius: 8px;
     }
 }
+
+/* =========================
+    FOR MINDRE SKJERMER
+========================= */
+
+h2{
+    color: violet;
+    padding-left: 5vw;
+    font-size: 4vh;
+}
+h6{
+    display: flex;
+    justify-content: center;
+    font-size: 7vh;
+    margin: 0;
+    padding-top: 2vh;
+}
+.Valg{
+    font-size: 3vh;
+    font-weight: bold;
+    padding-left: 6vw;
+    width: 20vw;
+}
+.h21{
+    display: flex;
+    justify-content: flex-end;
+    width: 10vw;
+    margin-top: -34vh;
+    padding-left: 50vw;
+}
+h8{
+    color: violet;
+    padding-left: 5vw;
+    font-size: 7vh;
+    font-weight: bold;
+}
+.Priser{
+    padding-left: 45vw;
+}

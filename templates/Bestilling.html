@@ -9,64 +9,72 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/Logo1.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <nav class="Navbar">
         <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/Logo1.png') }}" alt=""></a>
-    <h1> <span style="color: violet">V</span>elkommen til Super-PC</h1>
-</nav>
+        <h1> <span style="color: violet">S</span>uper-PC</h1>
+    </nav>
 
 
-<h4>Lag din egen pc her:</h4>
-<section class="Butikk">
+    <h4>Lag din egen pc her:</h4>
+    <section class="Butikk">
 
-    
-    <section class="Dropdowns">
-    <label for="Farge"><span style="color:violet">V</span>elg en farge:</label>
 
-    <select name="Farge" id="Farge">
-    <option class="Velg">----------</option>
-     {%for farge in Farge%}   
-     <option tabindex="0" type="button" value="{{farge}}">{{farge}}</option>
-{%endfor%}
-    </select>
-    <label for="Cpu"><span style="color:violet">V</span>elg en Prosessor:</label>
-    <select name="Cpu" id="Cpu">
-        <option class="Velg" value="0">----------</option>
-    {%for cpu in Cpu%}
-    <option value="{{ Cpu['Navn'] }}">{{ cpu['Navn'] }} - {{ cpu['pris'] }} kr</option>
-    {%endfor%}
+        <section class="Dropdowns">
+            <form method="POST" action="/Confirmation1">
+                <label for="Farge"><span style="color:violet">V</span>elg en farge:</label>
 
-    </select>
+                <select name="Farge" id="Farge" required>
+                    <option value="0" id="Velg" class="Velg" disabled selected>----------</option>
+                    {%for farge in Farge%}
+                    <option tabindex="0" type="button" value="{{farge}}">{{farge}}</option>
+                    {%endfor%}
+                </select>
+                <label for="Cpu"><span style="color:violet">V</span>elg en Prosessor:</label>
+                <select name="Cpu" id="Cpu" required>
+                    <option value="0" id="Velg" class="Velg" disabled selected>----------</option>
+                    {%for cpu in Cpu%}
+                    <option value="{{ cpu }}">{{ cpu['Navn'] }} - {{ cpu['pris'] }} kr</option>
+                    {%endfor%}
 
-    <label for="Gpu"><span style="color:violet">V</span>elg ett grafikkort:</label>
-    <select name="Gpu" id="Gpu">
-        <option value="0" class="Velg">----------</option>
-    {%for gpu in Gpu%}
-    <option value="{{ Gpu['Navn'] }}">{{ gpu['Navn'] }} - {{ gpu['pris'] }} kr</option>
-    {%endfor%}
+                </select>
 
-    </select>
+                <label for="Gpu"><span style="color:violet">V</span>elg ett grafikkort:</label>
+                <select name="Gpu" id="Gpu" required>
+                    <option value="0" class="Velg" disabled selected>----------</option>
+                    {%for gpu in Gpu%}
+                    <option value="{{ gpu }}">{{ gpu['Navn'] }} - {{ gpu['pris'] }} kr</option>
+                    {%endfor%}
 
-    <label for="ram"><span style="color:violet">V</span>elg en mengde DDR5 RAM:</label>
-    <select name="ram" id="ram">
-        <option class="Velg" value="0">----------</option>
-    {%for ram in ram%}
-    <option value="{{ ram['Navn'] }}">{{ ram['Navn'] }} - {{ ram['pris'] }} kr</option>
-    {%endfor%}
+                </select>
 
-    </select>
-   <a href=""> <button class="Submit" id="Submit">Velg PC</button> </a>
-   </section>
-   
+                <label for="ram"><span style="color:violet">V</span>elg en mengde DDR5 RAM:</label>
+                <select name="ram" id="ram" required>
+                    <option id="Velg" value="0" class="Velg" disabled selected>----------</option>
+                    {%for ram in ram%}
+                    <option value="{{ ram }}">{{ ram['Navn'] }} - {{ ram['pris }} kr</option>
+                    {%endfor%}
 
-<section class="Bilde_t">
-    <img class="pc_del" src="{{ url_for('static', filename='images/pc_del.png') }}" alt="Bilde av demo pc deler">
-    <img class="pc1" src="{{ url_for('static', filename='images/pc1.jpg') }}" alt="Bilde av demo pc">
-    </section>
+
+                </select>
+                <a href=""> <button class="Submit" type="submit" id="Submit">Velg PC</button> </a>
+        </section>
+
+
+        </form>
+
+
+        <section class="Bilde_t">
+            <img class="pc_del" src="{{ url_for('static', filename='images/pc_del.png') }}"
+                alt="Bilde av demo pc deler">
+            <img class="pc1" src="{{ url_for('static', filename='images/pc1.jpg') }}" alt="Bilde av demo pc">
+        </section>
     </section>
 
 </body>
