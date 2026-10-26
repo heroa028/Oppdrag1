@@ -17,7 +17,9 @@
 
 
 **Informasjon som skal sendes inn:** Navn, Mail, tlf, specs. 
-De skal kunne navigere med tab, kunne se alt lett og tydelig.  
+
+**Universell Utforming:** 
+Jeg har sørget for at man kan navigere uten mus med bare tastatur, passet på at alle bilder har alt-tekst, passet på at fargene passer med hverandre og er lette å se på likt. Jeg har brukt tabinxed der det er nødvendig for at det skal skje i riktig rekkefølge. 
 
 
 **Situasjon:**
