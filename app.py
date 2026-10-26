@@ -56,7 +56,8 @@ def Conf1():
     if "0" in (Farge, Gpu, Cpu, Ram) or not all([Farge, Gpu, Cpu, Ram]):
         flash("Vennligst velg en av alle komponentene!")
         return redirect(url_for("bestilling"))
-    return render_template("Conf1.html", Ram=valgtRam, Cpu=valgtCpu, Gpu=valgtGpu, Farge=Farge)
+    Sum = valgtCpu["pris"]+valgtGpu["pris"]+valgtRam["pris"]
+    return render_template("Conf1.html", Sum=Sum, Ram=valgtRam, Cpu=valgtCpu, Gpu=valgtGpu, Farge=Farge)
 
 
 
