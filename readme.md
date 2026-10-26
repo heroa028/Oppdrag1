@@ -6,10 +6,15 @@
 **Sider:** Forside, Bestilling, konfirmasjon, kvittering og Galleri. \
 **Informasjon som skal sendes inn:** Navn, Mail, tlf, specs. \
 De skal kunne navigere med tab, kunne se alt lett og tydelig.  \
-**Situasjon:** \ **1.** Du starter ved å komme inn på forsiden hvor du lett kan "Tabbe" og se hvor du kan gå videre til bestillings siden.\ 
-**2.** Her fyller du ut et "form" med hvordan du ønsker å bygge pc-en din med riktige priser og flere forskjellige produkter.\ 
-**3.**Etter du har fylt ut "formen" sendes valgene dine inn til flask og tar med pris og navn på produktet ditt videre til neste side.\
-**4.**Til sist blir du direktert til en "Kvittering" side hvor du får vite hvilke valg du lagde og prisen på produktet.\
+**Situasjon:**
+
+**1.** Du starter ved å komme inn på forsiden, hvor du lett kan bruke Tab-tasten og se hvor du kan gå videre til bestillingssiden.
+
+**2.** Her fyller du ut et skjema med hvordan du ønsker å bygge PC-en din, med riktige priser og flere forskjellige produkter.
+
+**3.** Etter at du har fylt ut skjemaet, sendes valgene dine til Flask, som tar med prisen og navnene på produktene videre til neste side.
+
+**4.** Til sist blir du dirigert til en kvitteringsside, hvor du får vite hvilke valg du gjorde og den totale prisen på produktet.
 **Mappe-struktur:** \
 Oppdrag1\
 ├── _pycache__\
