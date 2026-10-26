@@ -1,11 +1,25 @@
 **PC-Bygger** \
+
+
 *Laget av Henry JR* \
+
+
 **Navn:** SuperPC \
+
+
 **Bruker:** Ungdom og unge voksne som skal kjøpe kraftig pc. \
+
+
 **Problem:** Gjør det lettere å bestille pcer med riktig «Specs». \
+
+
 **Sider:** Forside, Bestilling, konfirmasjon, kvittering og Galleri. \
+
+
 **Informasjon som skal sendes inn:** Navn, Mail, tlf, specs. \
 De skal kunne navigere med tab, kunne se alt lett og tydelig.  \
+
+
 **Situasjon:**
 
 **1.** Du starter ved å komme inn på forsiden, hvor du lett kan bruke Tab-tasten og se hvor du kan gå videre til bestillingssiden.
@@ -15,6 +29,8 @@ De skal kunne navigere med tab, kunne se alt lett og tydelig.  \
 **3.** Etter at du har fylt ut skjemaet, sendes valgene dine til Flask, som tar med prisen og navnene på produktene videre til neste side.
 
 **4.** Til sist blir du dirigert til en kvitteringsside, hvor du får vite hvilke valg du gjorde og den totale prisen på produktet.
+
+
 **Mappe-struktur:** \
 Oppdrag1\
 ├── _pycache__\
@@ -31,3 +47,6 @@ Oppdrag1\
 ├── app.py\
 ├── readme.md\
 └── requirements.txt\
+
+
+
